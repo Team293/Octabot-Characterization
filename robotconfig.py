@@ -14,12 +14,12 @@
     "rightControllerTypes": ['WPI_TalonSRX'],
     # Set motors to inverted or not
     # If doing drive test, treat this as the left side of the drivetrain
-    "motorsInverted": [],
+    "motorsInverted": [True],
     # Only if you are doing drive (leave empty "[]" if not)
-    "rightMotorsInverted": [],
+    "rightMotorsInverted": [True],
     # Encoder edges-per-revolution (*NOT* cycles per revolution!)
     # For the CTRE Mag Encoder, use 16384 (4 * 4096 = 16384)
-    "encoderEPR": 28,
+    "encoderEPR": 112,
     # Gearing accounts for the gearing between the encoder and the output shaft
     "gearing": 15,
     # Encoder ports (leave empty "[]" if not needed)
@@ -44,6 +44,7 @@
     # "0" (Pigeon CAN ID or AnalogGyro channel),
     # "new WPI_TalonSRX(3)" (Pigeon on a Talon SRX),
     # "" (NavX using default SPI, ADXRS450 using onboard CS0, or no gyro)
-    "gyroPort": "SerialPort.Port.kMXP",
+    "gyroPort": "I2C.Port.kMXP",
 }
+
 
