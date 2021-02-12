@@ -14,14 +14,14 @@
     "rightControllerTypes": ['WPI_TalonSRX'],
     # Set motors to inverted or not
     # If doing drive test, treat this as the left side of the drivetrain
-    "motorsInverted": [True],
+    "motorsInverted": [False],
     # Only if you are doing drive (leave empty "[]" if not)
-    "rightMotorsInverted": [True],
+    "rightMotorsInverted": [False],
     # Encoder edges-per-revolution (*NOT* cycles per revolution!)
     # For the CTRE Mag Encoder, use 16384 (4 * 4096 = 16384)
     "encoderEPR": 112,
     # Gearing accounts for the gearing between the encoder and the output shaft
-    "gearing": 15,
+    "gearing": 20,
     # Encoder ports (leave empty "[]" if not needed)
     # Specifying encoder ports indicates you want to use Rio-side encoders
     # If doing drive test, treat this as the left side of the drivetrain
@@ -30,7 +30,7 @@
     "rightEncoderPorts": [],
     # Set to True if encoders need to be inverted
     # If doing drive test, treat this as the left side of the drivetrain
-    "encoderInverted": False,
+    "encoderInverted": True,
     # Only if you are doing drive (set to False if not needed)
     "rightEncoderInverted": False,
     # ** The following is only if you are using a gyro for the DriveTrain test**

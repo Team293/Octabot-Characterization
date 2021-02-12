@@ -58,7 +58,7 @@ public class Robot extends TimedRobot {
   static private double ENCODER_EDGES_PER_REV = 112 / 4.;
   static private int PIDIDX = 0;
   static private int ENCODER_EPR = 112;
-  static private double GEARING = 15;
+  static private double GEARING = 20;
   
   private double encoderConstant = (1 / GEARING) * (1 / ENCODER_EDGES_PER_REV);
 
@@ -132,7 +132,7 @@ public class Robot extends TimedRobot {
 
         break;
       case LEFT:
-        motor.setSensorPhase(false);
+        motor.setSensorPhase(true);
         
         leftEncoderPosition = ()
           -> motor.getSelectedSensorPosition(PIDIDX) * encoderConstant;
@@ -162,10 +162,10 @@ public class Robot extends TimedRobot {
     stick = new Joystick(0);
     
     // create left motor
-    WPI_TalonSRX leftMotor = setupWPI_TalonSRX(1, Sides.LEFT, true);
+    WPI_TalonSRX leftMotor = setupWPI_TalonSRX(1, Sides.LEFT, false);
 
 
-    WPI_TalonSRX rightMotor = setupWPI_TalonSRX(2, Sides.RIGHT, true);
+    WPI_TalonSRX rightMotor = setupWPI_TalonSRX(2, Sides.RIGHT, false);
     drive = new DifferentialDrive(leftMotor, rightMotor);
     drive.setDeadband(0);
 
